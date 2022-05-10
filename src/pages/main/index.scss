@@ -1,0 +1,27 @@
+.wrap {
+    display: flex;
+    flex-wrap: wrap;
+
+    .topic_wrap {
+        flex-basis: 180px;
+        padding-left: 10px;
+        border-right: 1px dotted black;
+        // border-top: 1px dotted black;
+    }
+    .topic_wrap:last-child {
+        border-right: none;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .wrap {
+        .topic_wrap {
+            flex-basis: 160px;
+            padding-left: 10px;
+            border-right: none;
+        }
+        .topic_wrap:last-child {
+            border-right: none;
+        }
+    }
+}

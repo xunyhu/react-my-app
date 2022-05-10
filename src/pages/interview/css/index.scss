@@ -1,0 +1,47 @@
+.parent {
+    width: 100px;
+    height: 100px;
+    background: red;
+    .child {
+        width: 50px;
+        height: 50px;
+        line-height: 50px;
+        background: yellow;
+    }
+}
+
+//1  div 水平垂直居中
+// .parent {
+//     display: grid;
+//     .child {
+//         justify-self: center;
+//         align-self: center;
+//     }
+// }
+
+.parent {
+    font-size: 0;
+    text-align: center;
+    &::before {
+        content: "";
+        display: inline-block;
+        width: 0;
+        height: 100%;
+        vertical-align: middle;
+    }
+}
+.child {
+    font-size: 10px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+//三角形
+.triangle {
+    width: 0;
+    height: 0;
+    margin-top: -50px;
+    border-width: 50px;
+    border-style: solid;
+    border-color: transparent transparent red transparent;
+}
